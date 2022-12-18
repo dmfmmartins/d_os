@@ -1,6 +1,6 @@
 # d_os
 
-Trying to create an OS
+Trying to create an OS in RUST
 
 ## Requirements
 
@@ -8,17 +8,17 @@ Trying to create an OS
 - Rust nightly
 - Rust "dependencies":
   - ```sh
-      rustup target add x86_64-unknown-none
-      rustup component add llvm-tools-preview
+    rustup target add x86_64-unknown-none
+    rustup component add llvm-tools-preview
     ```
 
 ## Compiling and running
 
 ```rust
-// Create `bios.img` and `uefi.img`
+// Create `bios.bin` and `uefi.bin`
 cargo build
 
-// Create `bios.img` and `uefi.img` and opens QEMU with correct settings
+// Create `bios.bin` and `uefi.bin` and opens QEMU with correct settings
 cargo run
 ```
 
