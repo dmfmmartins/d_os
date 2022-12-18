@@ -1,7 +1,7 @@
 use std::path::Path;
 
 fn main() {
-    let kernel = Path::new("kernel/src/main.rs");
+    let kernel = Path::new("target/x86_64-unknown-none/debug/kernel");
 
     // create an UEFI disk image (optional)
     let uefi_path = Path::new("uefi.bin");

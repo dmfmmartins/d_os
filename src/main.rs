@@ -4,7 +4,7 @@ fn main() {
     let uefi_path = env!("UEFI_PATH");
     let bios_path = env!("BIOS_PATH");
 
-    let uefi = false;
+    let uefi = true;
 
     let mut cmd = std::process::Command::new("qemu-system-x86_64");
     if uefi {

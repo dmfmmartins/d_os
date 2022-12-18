@@ -8,23 +8,36 @@ Trying to create an OS in RUST
 - Rust nightly
 - Rust "dependencies":
   - ```sh
-    rustup target add x86_64-unknown-none
     rustup component add llvm-tools-preview
+    rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
+    ```
+- For Ubuntu (22.10):
+  - ```sh
+    sudo apt install build-essential
     ```
 
 ## Compiling and running
 
-```rust
-// Create `bios.bin` and `uefi.bin`
+Assuming you are on the project root directory `d_os/`
+```sh
+# Compile kernel
+cd kernel
+cargo build --target x86_64-unknown-none
+
+# Create `bios.bin` and `uefi.bin`
+cd ..
 cargo build
 
-// Create `bios.bin` and `uefi.bin` and opens QEMU with correct settings
+# OR
+
+# Create `bios.bin` and `uefi.bin` and opens QEMU with correct settings
+cd ..
 cargo run
 ```
 
-## Goals
+## Current Goals
 
-- [ ] Actually being able to boot into the kernel and not hang up with the error "Did not find ELF magic number"
+- [ ] VGA Graphics
 
 ### More info and inspiration
 
