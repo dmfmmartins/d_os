@@ -5,7 +5,6 @@ Trying to create an OS in RUST
 ## Requirements
 
 - QEMU (x86_64)
-- Rust nightly
 - Rust "dependencies":
   - ```sh
     rustup component add llvm-tools-preview
@@ -20,19 +19,7 @@ Trying to create an OS in RUST
 
 Assuming you are on the project root directory `d_os/`
 ```sh
-# Compile kernel
-cd kernel
-cargo build --target x86_64-unknown-none
-
-# Create `bios.bin` and `uefi.bin`
-cd ..
-cargo build
-
-# OR
-
-# Create `bios.bin` and `uefi.bin` and opens QEMU with correct settings
-cd ..
-cargo run
+./run.sh
 ```
 
 ## Current Goals
